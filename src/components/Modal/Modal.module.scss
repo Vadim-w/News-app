@@ -1,24 +1,15 @@
-.modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-.modal.disable-click::after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    content: '';
-}
-.modal_bg{
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  &__bg {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -26,8 +17,9 @@
     opacity: 0;
     transition-property: opacity;
     transition-timing-function: ease;
-}
-.modal_inner{
+  }
+
+  &__inner {
     position: relative;
     top: -100px;
     background-color: white;
@@ -37,14 +29,41 @@
     transition-property: opacity, top;
     transition-timing-function: ease;
     border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
-}
-.modal_head{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+
+  &__head {
     padding: 20px;
     text-align: center;
-}
+  }
 
-.modal_head .btn{
+  &__body {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+
+  &__foot {
+    padding: 20px;
+    text-align: center;
+
+    & a {
+      color: #11cccc;
+    }
+  }
+
+  &.disable-click::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    content: '';
+  }
+
+  &__head .btn {
     position: absolute;
     top: -20px;
     right: -20px;
@@ -57,30 +76,15 @@
     justify-content: center;
     background-color: black;
     color: white;
+  }
 }
 
-.modal_body{
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f1f1f1;
-    position: relative;
-}
-.modal_foot{
-    padding: 20px;
-    text-align: center;
-}
-.modal_foot a {
-    color: #11cccc;
-}
 @media (max-width: 991px) {
-    .modal {
-        display: block;
-        overflow-y: auto;
-    }
-    .modal_inner {
-        margin: 50px auto;
-    }
-}
-.btn{
-
+  .modal {
+    display: block;
+    overflow-y: auto;
+  }
+  .modal__inner {
+    margin: 50px auto;
+  }
 }

@@ -5,53 +5,53 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-}
-.NavbarItems__logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-}
-.NavbarItems__menuIcon {
-    display: none;
-}
-.NavbarItems__fabFaNews {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-}
-.NavbarItems__navMenu {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-    width: 70vw;
-    justify-content: end;
-    margin-right: 2rem;
-}
-.NavbarItems__navMenuActive {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-}
-.NavbarItems__NavLinks {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-.NavbarItems__NavLinks:hover {
-    background-color: #6d76f7;
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
-}
-.NavbarItems__faFaBars {
-    color: white;
+    &__logo {
+        color: #fff;
+        justify-self: start;
+        margin-left: 20px;
+        cursor: pointer;
+        .NavbarItems__fabFaNews {
+            margin-left: 0.5rem;
+            font-size: 1.6rem;
+        }
+    }
+    &__menuIcon {
+        display: none;
+        .NavbarItems__faFaBars {
+            color: white;
+        }
+    }
+    &__navMenu {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-gap: 10px;
+        list-style: none;
+        text-align: center;
+        width: 70vw;
+        justify-content: end;
+        margin-right: 2rem;
+    }
+    &__navMenuActive {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    &__NavLinks {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        &:hover {
+            background-color: #6d76f7;
+            border-radius: 4px;
+            transition: all 0.2s ease-out;
+        }
+    }
 }
 
 @media screen and (max-width: 960px){

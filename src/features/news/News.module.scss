@@ -1,3 +1,14 @@
+.formBlock {
+    margin-top: 30px;
+    &__errorInput {
+        text-align: center;
+        color: red;
+    }
+    &__buttonSubmit {
+        text-align: center;
+    }
+}
+
 .newsBlock {
     height: 100%;
     width: 80%;
@@ -8,19 +19,11 @@
     align-items: stretch;
     justify-content: space-between;
 }
-.newsPage__title {
+.title {
     text-align: center;
     margin-top: 30px;
 }
 
 
-.formBlock__buttonSubmit {
-    text-align: center;
-}
-.formBlock {
-    margin-top: 30px;
-}
-.formBlock__errorInput {
-    text-align: center;
-    color: red;
-}
+
+
